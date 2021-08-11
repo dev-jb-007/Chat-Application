@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+#chatbox{
+    width: 100%;
+    height: 90vh;
+    border:1px solid black;
+}
+#main-heading{
+    width: max-content;
+    margin:10px auto;
+    font-family: 'Open Sans', sans-serif;
+}
