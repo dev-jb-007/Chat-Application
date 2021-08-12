@@ -1,6 +1,8 @@
 const express=require('express');
 const http=require('http');
 const app=express();
+const messageGenerator=require('./utils/messageGenerator');
+const usernameProvider=require('./utils/usernameProvider');
 require('dotenv').config();
 const server=http.createServer(app);
 const io=require('socket.io')(server);
@@ -20,8 +22,8 @@ app.get('/chat',(req,res)=>{
 io.on('connection',(socket)=>{
   socket.on('join',(obj)=>{
       socket.join(obj.room);
-      socket.emit('welcomeGreeting',`Welcome ${obj.username}`);
-      socket.broadcast.to(obj.room).emit('userjoined',{username:obj.username,createdAt:new Date().now});
+      socket.emit('welcomeGreeting',messageGenerator(obj.username,`Welcome ${obj.username}`));
+      socket.broadcast.to(obj.room).emit('userjoined',usernameProvider(obj.username));
   })
 })
 server.listen(process.env.PORT,process.env.HOST,()=>{
