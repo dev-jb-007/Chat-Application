@@ -21,10 +21,10 @@ socket.on('userjoined',(Obj)=>{
     mainchats.innerHTML=chatboxHtml;
     // chatbox.innerHTML=chatboxHtml;
 })
-socket.on('userleft',(Obj)=>{
-    chatboxHtml+=`<div class="chat-display-messages">
-        <p>${Obj.username} Left!!!</p>
-        <ion-icon class="back-carret" name="caret-back-outline"></ion-icon>
-    </div>`;
-    mainchats.innerHTML=chatboxHtml;
-})
+// socket.on('userleft',(Obj)=>{
+//     chatboxHtml+=`<div class="chat-display-messages">
+//         <p>${Obj.username} Left!!!</p>
+//         <ion-icon class="back-carret" name="caret-back-outline"></ion-icon>
+//     </div>`;
+//     mainchats.innerHTML=chatboxHtml;
+// })

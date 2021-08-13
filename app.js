@@ -25,11 +25,6 @@ io.on('connection',(socket)=>{
       socket.emit('welcomeGreeting',messageGenerator(obj.username,`Welcome ${obj.username}`));
       socket.broadcast.to(obj.room).emit('userjoined',usernameProvider(obj.username));
   })
-  socket.on('disconnect',()=>{
-      socket.broadcast('userleft',()=>{
-          
-      })
-  })
 })
 server.listen(process.env.PORT,process.env.HOST,()=>{
     console.log(`Server has started on port:${process.env.PORT} and host:${process.env.HOST}`)
