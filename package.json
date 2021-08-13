@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js -e hbs,js,css"
+    "start": "nodemon app.js -e hbs,js,css",
+    "css":"sass style.scss static/css/chat.css"
   },
   "keywords": [],
   "author": "",

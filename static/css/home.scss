@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap');
+@import "./variables";
+@mixin marginCenter($width) {
+    margin:auto;
+    width:$width;
+}
+@mixin border($size,$color) {
+    border: $size solid $color;
+}
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+body{
+    background-color:$primaryblack;
+}
+#logo{
+    position:absolute;
+    left:5%;
+    top:2%;
+    ion-icon{
+        width:50px;
+        height:50px;
+    }
+    color:$primaryred;
+}
+#main{
+    @include marginCenter(80%);
+    @include border(1px,$primaryred);
+    height:4000px;
+    @include flex(row);
+    #left,#right{
+        width:50%;
+        height:100%;
+    }
+    #left{
+        border-right: 1px solid $primaryred;
+        .image{
+            width:100%;
+            height: calc(100% / 3);
+            border-bottom: 1px solid $primaryred;
+            
+            img{
+                width: 40%;
+                aspect-ratio: 9/16;
+                border-radius:27px;
+                position:sticky;
+                top:200px;
+                margin: 100px 30%;
+            }
+        }
+        #second-image{
+            img{
+                width:70%;
+                aspect-ratio: 16/10;
+                margin: 100px 15%;
+            }
+        }
+        #third-image{
+            img{
+                width:80%;
+                aspect-ratio:16/10;
+                margin: 100px 10%;
+            }
+        }
+    }
+    #right{
+        #webchat-heading{
+            font-size:4rem;
+            @include marginCenter(max-content);
+            color:#087E8B;
+            letter-spacing:8px;
+            // transition:0.1s;
+            margin-top:200px;
+            font-family: 'M PLUS 1p', sans-serif;;
+        }
+    }
+}
