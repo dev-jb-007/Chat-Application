@@ -21,6 +21,17 @@ socket.on('userjoined',(Obj)=>{
     mainchats.innerHTML=chatboxHtml;
     // chatbox.innerHTML=chatboxHtml;
 })
+const createRoom=async()=>{
+    let roomname=document.getElementById('roomname').value;
+    let roompassword=document.getElementById('roompassword').value;
+    await fetch('../room/create',{
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({name:roomname,password:roompassword})
+    })
+}
 // socket.on('userleft',(Obj)=>{
 //     chatboxHtml+=`<div class="chat-display-messages">
 //         <p>${Obj.username} Left!!!</p>

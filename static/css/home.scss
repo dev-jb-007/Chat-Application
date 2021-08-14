@@ -26,7 +26,7 @@ body{
 }
 #main{
     @include marginCenter(80%);
-    @include border(1px,$primaryred);
+    // @include border(1px,$primaryred);
     height:4000px;
     @include flex(row);
     #left,#right{
@@ -34,11 +34,11 @@ body{
         height:100%;
     }
     #left{
-        border-right: 1px solid $primaryred;
+        // border-right: 1px solid $primaryred;
         .image{
             width:100%;
             height: calc(100% / 3);
-            border-bottom: 1px solid $primaryred;
+            // border-bottom: 1px solid $primaryred;
             
             img{
                 width: 40%;

@@ -14,7 +14,12 @@
 <body>
     <h2 id="main-heading">Welcome to this page</h2>
     <div id="chatbox">
-        <div id="room-info"></div>
+        <div id="room-info">
+            <input type="text" name="roomname" id="roomname">
+            <input type="password" name="roompassword" id="roompassword">
+            <button onclick ="createRoom()" id="create-room-btn">Create Room</button>
+            <button id="join-room-btn">Join Room</button>
+        </div>
         <div id="chat-area">
             <div id="chat-messages">
                 <div id="room-heading">

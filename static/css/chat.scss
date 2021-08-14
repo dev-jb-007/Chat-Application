@@ -1,3 +1,128 @@
-header{
-    width:100%;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#chatbox {
+    width: 100%;
+    height: 90vh;
+    border: 1px solid black;
+    display: flex;
+}
+
+#chatbox #room-info {
+    flex: 1;
+}
+
+#chatbox #chat-area {
+    flex: 3;
+    border-left: 1px solid black;
+    position: relative;
+}
+
+#chatbox #chat-area #chat-messages {
+    width: 100%;
+    height: 95%;
+}
+
+#chatbox #chat-area #chat-messages #main-chats {
+    width: 100%;
+    height: 95%;
+	overflow: auto;
+    /* background-color: green; */
+}
+#chatbox #chat-area #chat-messages #main-chats .chat-display-messages {
+	background-color: #bcd1f5;
+	width: fit-content;
+	height: fit-content;
+	padding: 1% 1%;
+	margin:40px 20px;
+	border-radius: 5px;
+	position: relative;
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+}
+#chatbox #chat-area #chat-messages #main-chats .chat-display-messages::before{
+	content: 'Admin';
+	position: absolute;
+	top:-25px;
+	left:0px;
+}
+#chatbox #chat-area #chat-messages #main-chats .chat-display-messages p{
+	margin: 0px;
+}
+#chatbox #chat-area #chat-messages #main-chats .chat-display-messages .back-carret{
+	width:25px;
+	height:25px;
+	position: absolute;
+	bottom:-3px;
+	left: -16px;
+	color: #bcd1f5;
+}
+#chatbox #chat-area #chat-messages #main-chats .me{
+	float: right;
+}
+#chatbox #chat-area #chat-messages #main-chats .chat-display-messages .front-carret{
+	width:25px;
+	height:25px;
+	position: absolute;
+	bottom:-3px;
+	right: -16px;
+	color: #bcd1f5;
+	/* right:-16px; */
+	transform: rotate(180deg);
+}
+#chatbox #chat-area #send-bar {
+    background-color: #2874f0;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+#chatbox #chat-area #send-bar #message {
+    background-color: #bcd1f5;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: 95%;
+}
+
+#chatbox #chat-area #room-heading {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+	background-color: grey;
+}
+
+#chatbox #chat-area #room-heading ion-icon {
+    flex: 1;
+    height: 100%;
+    cursor: pointer;
+}
+
+#chatbox #chat-area #room-heading #curr-room-name {
+    display: inline-block;
+    font-size: 1.8em;
+    flex: 19;
+    height: 100%;
+    padding: 5px 0px;
+}
+
+#chatbox #chat-area #send-bar ion-icon {
+    cursor: pointer;
+    width: 10%;
+    height: 70%;
+}
+
+#main-heading {
+    width: max-content;
+    margin: 10px auto;
+    font-family: 'Open Sans', sans-serif;
 }
